@@ -1,0 +1,46 @@
+{
+"name": "Tweety",
+"version": "2.0",
+"manifest_version": 2,
+
+"description": "A Google Chrome Extension, Copyright by Akhil Anil",
+"icons": {
+"128": "twitinside_128.jpeg"
+},
+
+"browser_action": {
+"default_icon": "twitinside_128.jpeg",
+"default_title": "Twitinside for Chrome",
+"default_popup": "twitter.html"
+},
+
+"homepage_url": "http://akhilspassion.blogspot.com",
+"incognito": "spanning",
+"permissions": [
+"http://www.blogger.com/",
+"http://www.twitter.com/",
+"activeTab",
+"https://ajax.googleapis.com/"
+],
+
+"content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+
+    "js": ["jquery-2.1.4.min.js","popup.js"]
+  }
+],
+
+"commands": {
+  "Restart App": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+5",
+      "mac": "Command+Shift+5"
+    },
+    "description": "Restart my app (Debugging)"
+  }
+}
+
+}
